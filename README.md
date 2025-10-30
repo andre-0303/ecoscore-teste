@@ -115,10 +115,7 @@ Basta abrir o arquivo `index.html` no seu navegador preferido.
 
 ---
 
-## 🤝 Equipe
-
-- 👨‍💻 **Front-end**: [Seu Nome]  
-- ⚙️ **Back-end**: [Nome do Parceiro]
+## Desenvolvido por: Bandeira Dev
 
 
 ---
