@@ -23,7 +23,7 @@ button.addEventListener("click", async () => {
 
 const cursosPorDia = {
   segunda: "Informática",
-  terca: "Administração",
+  terça: "Administração",
   quarta: "Agropecuária",
   quinta: "Edificações",
 };
