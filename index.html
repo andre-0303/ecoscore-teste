@@ -4,17 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcoScore 🌱</title>
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>EcoScore</h1>
-    <h3>Dia da semana: <span>Segunda</span></h3>
-    <h4>Curso do dia: <span>Informática</span></h4>
+    <div class="container">
+      <h1 id="title">EcoScore</h1>
+      <h3 class="day">Dia da semana: <span class="info">Segunda</span></h3>
+      <h4 class="day">Curso do dia: <span class="info">Informática</span></h4>
 
-    <label>Coloque o peso em Kg do balde:</label>
-    <input type="number" id="peso" name="peso" placeholder="Ex: 4" required />
+      <label class="label-text">Coloque o peso em Kg do balde:</label>
+      <input type="number" id="peso" name="peso" placeholder="Ex: 4" required />
 
-    <button type="submit">Salvar registro</button>
+      <button type="submit" id="button">Salvar registro</button>
+    </div>
+    <div class="img-container">
+      <img src="./img/img.jpg" alt="img" />
+    </div>
   </body>
   <script src="./scripts.js"></script>
 </html>
