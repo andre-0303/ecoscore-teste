@@ -80,9 +80,11 @@ async function buscarCampeaoSemana() {
       totais[r.curso] = (totais[r.curso] || 0) + r.peso;
     }
 
-    const campeao = Object.entries(totais).sort((a, b) => a[1] - b[1])[0][0];
+    // Ordena do menor para o maior (menos resíduos é melhor)
+    const campeao = Object.entries(totais).sort((a, b) => a[1] - b[1])[0];
 
-    cursoSpan.textContent = `🏆 Campeão: ${campeao}`;
+    // Mostra o nome e o peso formatado
+    cursoSpan.textContent = `🏆 Campeão: ${campeao[0]} (${campeao[1]} kg)`;
   } catch (err) {
     console.error(err);
     cursoSpan.textContent = "Erro ao calcular campeão";

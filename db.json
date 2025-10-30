@@ -2,8 +2,26 @@
   "registros": [
     {
       "id": "1965",
-      "peso": 4,
+      "peso": 2,
       "curso": "Edificações",
+      "data": "2025-10-27T17:17:17.883Z"
+    },
+    {
+      "id": "1966",
+      "peso": 4,
+      "curso": "Informática",
+      "data": "2025-10-28T17:17:17.883Z"
+    },
+    {
+      "id": "1967",
+      "peso": 4.5,
+      "curso": "Agropecuária",
+      "data": "2025-10-29T17:17:17.883Z"
+    },
+    {
+      "id": "1968",
+      "peso": 6,
+      "curso": "Administração",
       "data": "2025-10-30T17:17:17.883Z"
     }
   ]
