@@ -18,11 +18,12 @@ button.addEventListener("click", async () => {
   });
 
   alert(`Registro salvo para ${curso}!`);
+  document.querySelector("#peso").value = ""; // limpa input após salvar
 });
 
 const cursosPorDia = {
   segunda: "Informática",
-  terça: "Administração0",
+  terca: "Administração",
   quarta: "Agropecuária",
   quinta: "Edificações",
 };
@@ -76,13 +77,11 @@ async function buscarCampeaoSemana() {
     }
 
     const campeao = Object.entries(totais).sort((a, b) => b[1] - a[1])[0][0];
-
     cursoSpan.textContent = `🏆 Campeão: ${campeao}`;
   } catch (err) {
     console.error(err);
     cursoSpan.textContent = "Erro ao calcular campeão";
   }
 }
-
 
 //json-server --watch db.json --port 3000
