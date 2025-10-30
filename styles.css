@@ -126,6 +126,20 @@ input#peso:focus {
     outline-offset: 2px;
 }
 
+#button-ranking {
+    background: #09b935;
+    padding: 15px 25px 15px 25px;
+    color: #fafafa;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+
+#button-ranking:hover {
+    transform: translateY(-5px);
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column;
