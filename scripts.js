@@ -6,6 +6,10 @@ button.addEventListener("click", async () => {
   const curso = cursosPorDia[diaAtual];
 
   if (!peso || !curso) return alert("Digite o peso e verifique o dia!");
+  const existe = registros.find(
+    (r) => r.curso === curso && r.data.startsWith(hojeISO)
+  );
+  if (existe) return alert("Já existe um registro para este dia!");
 
   await fetch("http://localhost:3000/registros", {
     method: "POST",
@@ -23,7 +27,7 @@ button.addEventListener("click", async () => {
 
 const cursosPorDia = {
   segunda: "Informática",
-  terça: "Administração",
+  terca: "Administração",
   quarta: "Agropecuária",
   quinta: "Edificações",
 };
@@ -76,7 +80,8 @@ async function buscarCampeaoSemana() {
       totais[r.curso] = (totais[r.curso] || 0) + r.peso;
     }
 
-    const campeao = Object.entries(totais).sort((a, b) => b[1] - a[1])[0][0];
+    const campeao = Object.entries(totais).sort((a, b) => a[1] - b[1])[0][0];
+
     cursoSpan.textContent = `🏆 Campeão: ${campeao}`;
   } catch (err) {
     console.error(err);
