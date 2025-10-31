@@ -31,7 +31,8 @@
             totais[r.curso] = (totais[r.curso] || 0) + r.peso;
           }
 
-          const ranking = Object.entries(totais).sort((a, b) => b[1] - a[1]);
+          const ranking = Object.entries(totais).sort((a, b) => a[1] - b[1]);
+
           const ul = document.getElementById("ranking-list");
 
           ul.innerHTML = ranking
@@ -41,7 +42,7 @@
                 <div>
                   ${
                     i === 0
-                      ? '<i data-lucide="trophy" class="icon"></i>'
+                      ? '<i data-lucide="leaf" class="icon"></i>'
                       : `<i data-lucide="award" class="icon"></i>`
                   }
                   ${i + 1}º <strong>${curso}</strong>
